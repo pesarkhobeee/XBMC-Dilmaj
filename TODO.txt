@@ -1,0 +1,3 @@
+SpeedUp Dictionary Search
+Enable Enter Event On SearchBox
+Load a Spinner Image During Searching
