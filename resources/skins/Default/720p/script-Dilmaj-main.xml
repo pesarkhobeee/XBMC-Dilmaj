@@ -122,24 +122,27 @@
             <scrollsuffix> - </scrollsuffix>
       </control>
       
-
-      <control type="edit" id="122">
-            <description>My First edit control</description>
-            <posx>30</posx>
-            <posy>520</posy>
-            <width>550</width>
-            <visible>true</visible>
-            <aligny>center</aligny>
-            <hinttext>Enter search string</hinttext>
-            <font>font14</font>
-            <textoffsetx>10</textoffsetx>
-            <textcolor>FFB2D4F5</textcolor>
-            <disabledcolor>FF000000</disabledcolor>
-            <invalidcolor>FFFFFFFF</invalidcolor>
-            <texturefocus>button-focus.png</texturefocus>
-            <texturenofocus>button-nofocus.png</texturenofocus>
-            <pulseonselect>no</pulseonselect>
-      </control>
+      <control type="button" id="122">
+				<description>Enter search string</description>
+        <posx>30</posx>
+        <posy>520</posy>
+				<width>550</width>
+				<visible>true</visible>
+				<aligny>center</aligny>
+				<label>Enter search string</label>
+				<font>font14</font>
+				<textoffsetx>10</textoffsetx>
+				<textcolor>FFB2D4F5</textcolor>
+				<disabledcolor>FF000000</disabledcolor>
+				<invalidcolor>FFFFFFFF</invalidcolor>
+				<texturefocus>button-focus.png</texturefocus>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<onup>123</onup>
+				<ondown>123</ondown>
+        <onleft>123</onleft>
+        <onright>123</onright>        
+		  </control>
       
     <control type="button" id="123">
           <description>My first button control</description>
@@ -162,10 +165,10 @@
           <onclick></onclick>
           <onfocus>-</onfocus>
           <onunfocus>-</onunfocus>
-          <onup>2</onup>
-          <ondown>3</ondown>
-          <onleft>1</onleft>
-          <onright>1</onright>
+          <onup>122</onup>
+          <ondown>122</ondown>
+          <onleft>122</onleft>
+          <onright>122</onright>
     </control>
 
     </control>

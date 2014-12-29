@@ -42,7 +42,7 @@ class GUI( xbmcgui.WindowXMLDialog ):
     def onClick( self, controlId ):
       if( controlId == SEARCH_BUTTON ) :
         xbmc.executebuiltin( "ActivateWindow(busydialog)" )
-        search_word = self.getControl(EDIT_BOX).getText()
+        search_word = self.getControl(EDIT_BOX).getLabel().strip().encode("utf-8")
         self.getControl( STATUS_LABEL ).setLabel( _(613) )
         dictionary = Dilmaj()
         dictionary_result = dictionary.search(search_word)
@@ -50,7 +50,14 @@ class GUI( xbmcgui.WindowXMLDialog ):
         self.getControl( LABLE_BOX ).setLabel(dictionary_result)
         self.getControl( STATUS_LABEL ).setLabel( _(614) )
         xbmc.executebuiltin( "Dialog.Close(busydialog)" )
-        
+      else :
+        word = ""
+        kb = xbmc.Keyboard(word, _(614), False)
+        kb.doModal()
+        if kb.isConfirmed():
+          word = kb.getText()
+          self.getControl(controlId).setLabel(word)  
+          
     def onFocus( self, controlId ):
       self.controlId = controlId
 
