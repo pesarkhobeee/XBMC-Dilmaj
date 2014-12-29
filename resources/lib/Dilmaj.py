@@ -1,11 +1,13 @@
 from xml.etree import ElementTree
 from os.path import expanduser
+import os, sys
+__cwd__ = sys.modules[ "__main__" ].__cwd__
 
 class Dilmaj():
     
     def __init__(self):
         home = expanduser('~')
-        self.EnglishToPersian = self.ConvertXmlToDict(home + '/.xbmc/addons/script.dilmaj.xbmc/resources/lib/generic.xdb')
+        self.EnglishToPersian = self.ConvertXmlToDict(__cwd__ + '/resources/lib/generic.xdb')
     def search(self, search):
         word = self.word_search(search)
         return word
